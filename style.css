@@ -1,21 +1,24 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Space Grotesk";
+    font-weight: 600;
+    box-sizing: border-box;
 }
 
 body {
     background-color:bisque;
     display: flex;
+    flex-direction: column;
     margin: auto;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
-    font-family: "Space Grotesk";
-    font-size: 100px;
+    font-size: calc(50px + 3vw);
 }
 
 #container {
@@ -24,20 +27,44 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.container-grid {
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 #grid {
     display: grid;
-    width: 600px;
-    height: 600px;
-    grid-template-columns: repeat(16, auto);
-    grid-template-rows: repeat(16, auto);
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
 
 .tile {
-    background-color: rgba(255, 0, 0, 0.8);
-    font-size: 12px;
-    font-family: "Anonymous Pro";
-    text-align: center;
+    background-color: rgb(229, 73, 46);
 }
+
+#new-grid {
+    margin:20px;
+    background-color:aquamarine;
+    width:400px;
+    height:50px;
+    border: 3px dashed black;
+}
+
+#reset {
+    margin:20px;
+    background-color:aquamarine;
+    width:400px;
+    height:50px;
+    border: 3px dashed black;
+}
+
+
 
